@@ -1,0 +1,8 @@
+show_header: false
+title: monkina's
+description: 하나가 되는 순간 모두가 주목해
+remote_theme: "dracula/gh-pages"
+
+plugins:
+- jekyll-seo-tag
+
