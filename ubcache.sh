@@ -7,7 +7,7 @@ case "$1" in
         if [ `pgrep -x "unbound"` ]; then
                 rtime=`date | awk '{print $4}'`
                 rhour=$(date -d $rtime +%s)
-                ftime=`ls -e /opt/share/unbound/configs/uncache.txt | awk '{print $9}'`
+                ftime=`ls -e /opt/share/unbound/configs/cache.txt | awk '{print $9}'`
                 fhour=$(date -d $ftime +%s)
                 dhour=$(($fhour + 600))  # cache valid time - 10 mins
 
@@ -16,7 +16,7 @@ case "$1" in
                         exit;
                 else
                         logger -t ubcache "Restored Unbound Cache" ;
-                        unbound-control load_cache < /opt/share/unbound/configs/uncache.txt
+                        unbound-control load_cache < /opt/share/unbound/configs/cache.txt
 
                 fi
                 break
@@ -28,7 +28,7 @@ case "$1" in
 
         save)
         logger -t ubcache "Saving Unbound Cache"
-        unbound-control dump_cache > /opt/share/unbound/configs/uncache.txt ;;
-        *) echo "Usage: ubcache [save] [restore]" ; exit 1
+        unbound-control dump_cache > /opt/share/unbound/configs/cache.txt ;;
+        *) echo "Usage: ubcache.sh [save] [restore]" ; exit 1
          ;;
 esac
