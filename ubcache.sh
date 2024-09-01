@@ -1,5 +1,8 @@
 #!/bin/sh
 # ubcache.sh - automatic save and restore of unbound cache by JGrana mod by monkitrainer
+# If you want to restore cache at Unbound restart,
+# run this first in shell prompt to install pgrep:
+# opkg install procps-ng-pgrep
 
 case "$1" in
         restore)
