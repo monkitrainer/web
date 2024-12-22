@@ -25,7 +25,7 @@ https://iplists.firehol.org/files/iblocklist_ciarmy_malicious.netset
 https://iplists.firehol.org/files/myip.ipset
 #https://iplists.firehol.org/files/normshield_high_attack.ipset
 #https://iplists.firehol.org/files/normshield_high_bruteforce.ipset
-https://iplists.firehol.org/files/spamhaus_drop.netset
+#https://iplists.firehol.org/files/spamhaus_drop.netset
 #https://iplists.firehol.org/files/spamhaus_edrop.netset
 #https://iplists.firehol.org/files/urlvir.ipset
 https://lists.blocklist.de/lists/strongips.txt
